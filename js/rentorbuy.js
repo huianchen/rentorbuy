@@ -12,6 +12,7 @@ $(document).ready(function(){
 
   $(".condition").click(function(){
     $(".condition.active").removeClass("active");
+    $(".sort.active").removeClass("active");
     $(this).toggleClass("active");
   });
 
@@ -27,6 +28,7 @@ $(document).ready(function(){
   $(".select a").click(function(){
     $(this).toggleClass("active");
     $(".condition").removeClass("active");
+    $(".sort").removeClass("active");
   });
 
   $(".delete a").click(function(){
