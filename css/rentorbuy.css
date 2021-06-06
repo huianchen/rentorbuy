@@ -23,6 +23,13 @@ header {
 	float: right;
 }
 
+header.fix {
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
 /*same width and margin*/
 .head-wrapper, h1.title, .filter, .goback {
 	width: 90%;
@@ -65,13 +72,13 @@ header {
 }
 
 /*h1*/
-h1.map-h1 {
+h1.index {
 	background: rgba(0,0,0,0.5);
 	color: white;
 	padding: 10px 15px;
 	margin: 0 auto;
 	border-radius: 5px;
-	position: absolute;
+	position: fixed;
 	top: 120px;
 	left: calc(50% - 139px);
 }
@@ -102,12 +109,16 @@ h1.title.myfavorite {
 
 /*map*/
 .metro-map {
-	height: calc(100vh - 80px);
-	text-align: center;
-	overflow-x: scroll;
-	overflow-y: scroll;
-	display: flex;
-  align-items: center;
+	padding-top: 80px;
+	overflow: auto;
+}
+
+map area:hover {
+	content: '';
+	width: 24px;
+	height: 24px;
+	background: url('../images/icons/focus.svg');
+	display: block;
 }
 
 /*switch between buy and rent*/
