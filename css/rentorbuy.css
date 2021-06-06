@@ -13,8 +13,12 @@ header {
 	overflow: hidden;
 }
 
+.btn-search {
+	margin-top: 5px;
+	float: left;
+}
+
 .btn-favorite {
-	
 	margin-top: 5px;
 	float: right;
 }
@@ -26,6 +30,10 @@ header {
 	text-align: left;
 	margin: 20px auto;
 	overflow: hidden;
+}
+
+.head-wrapper {
+	text-align: center;
 }
 
 /*control font size*/
@@ -241,20 +249,18 @@ nav a {
 	box-shadow: 0px 3px 5px rgb(0,0,0,0.1);
 	position: absolute;
 	top: 45px;
+	left: 0;
 	z-index: -1;
 	opacity: 0;
 	transition: 0.3s ease-in-out;
 }
 
-.filter .condition.active + .condition-expand {
-	left: 0;
-	z-index: 2;
-	opacity: 1;
-	transition: 0.3s ease-in-out;
+.filter .sort + .condition-expand {
+	left: auto;
+	right: 0;
 }
 
-.filter .sort.active + .condition-expand {
-	right: 0;
+.filter .condition.active + .condition-expand, .filter .sort.active + .condition-expand {
 	z-index: 2;
 	opacity: 1;
 	transition: 0.3s ease-in-out;
@@ -496,6 +502,11 @@ nav a {
 
 	.filter .condition:hover::after {
 		background: url('../images/icons/descent_green.svg');
+		background-size: 100%;
+	}
+
+	.filter .condition.active:hover::after {
+		background: url('../images/icons/ascent_green.svg');
 		background-size: 100%;
 	}
 

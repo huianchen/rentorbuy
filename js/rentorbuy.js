@@ -10,8 +10,23 @@ $(document).ready(function(){
     $(".buy a").removeClass("active");
   });
 
-  $(".condition").click(function(){
-    $(".condition.active").removeClass("active");
+  $("#filter-1").click(function(){
+    $("#filter-2.active").toggleClass("active");
+    $("#filter-3.active").toggleClass("active");
+    $(".sort.active").removeClass("active");
+    $(this).toggleClass("active");
+  });
+
+  $("#filter-2").click(function(){
+    $("#filter-1.active").toggleClass("active");
+    $("#filter-3.active").toggleClass("active");
+    $(".sort.active").removeClass("active");
+    $(this).toggleClass("active");
+  });
+
+  $("#filter-3").click(function(){
+    $("#filter-1.active").toggleClass("active");
+    $("#filter-2.active").toggleClass("active");
     $(".sort.active").removeClass("active");
     $(this).toggleClass("active");
   });
