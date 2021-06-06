@@ -41,6 +41,7 @@ $(document).ready(function(){
   });
 
   $(".select a").click(function(){
+    $(".select a.active").removeClass("active");
     $(this).toggleClass("active");
     $(".condition").removeClass("active");
     $(".sort").removeClass("active");
