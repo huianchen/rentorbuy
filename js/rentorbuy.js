@@ -16,6 +16,7 @@ $(document).ready(function(){
   });
 
   $(".sort").click(function(){
+    $(".condition.active").removeClass("active");
     $(this).toggleClass("active");
   });
 
