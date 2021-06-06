@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>租金/房價一覽表 | 買不起房也租不起?</title>
+	<meta name="description" content="到底該存錢買房還是租屋一輩子?選擇您喜歡的地區, 即可查看租金/房價一覽表, 讓您依據您的財力狀況, 選擇最適合您的方案!">
+	<meta name="keywords" content="租屋,買房,房價,比價">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="google-site-verification" content="QdoxjLfBUXO8UkxClsyrax_sdIfFdWOPNiK5ca24IvM" />
+	<meta name="theme-color" content="#ffffff">
+	<meta property="og:title" content="租金/房價一覽表 | 買不起房也租不起?" />
+	<meta property="og:description" content="到底該存錢買房還是租屋一輩子?選擇您喜歡的地區, 即可查看租金/房價一覽表, 讓您依據您的財力狀況, 選擇最適合您的方案!" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/rentorbuy.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./js/rentorbuy.js"></script>
+	<link rel="icon" href="">
+	<link rel="alternate icon" href="" type="image/x-icon">
+	<link rel="mask-icon" href="" color="#000000">
+	<link rel="apple-touch-icon" href="">
+	<link rel="apple-touch-icon-precomposed" href="" />
+	<link rel="manifest" href="">
+</head>
+<body>
+	<!-- 版頭 -->
+	<header>
+		<p class="head-wrapper">
+			<a href="index.html" title="重新選擇車站"><img src="images/logo.svg" alt="買不起房也租不起" title="重新選擇車站" height="40"></a>
+			<a class="btn-favorite" href="favorite.html" title="我的收藏"><img src="images/icons/favorite_white.svg" alt="我的收藏" title="我的收藏" height="24"></a>
+		</p>
+	</header>
+
+	<!-- span內要串車站名 -->
+	<h1 class="title">捷運<span>忠孝新生</span><a class="btn-reset hint" href="index.html" title="重新選擇車站">重新選擇</a></h1>
+
+	<!-- 切換租屋/買房 -->
+	<nav>
+		<!-- span內要串金額 -->
+		<h2 class="rent"><a class="active" href="javascript:;" title="每月租金"><span class="title">$24,500</span><i class="hint"> /月租</i></a></h2>
+		<h2 class="buy"><a href="javascript:;" title="每月房貸"><span class="title">$57,000</span><i class="hint"> /月付</i></a></h2>
+	</nav>
+
+	<!-- 篩選/排序 -->
+	<section class="filter">
+		<!-- 當選完條件 span內要串條件名稱 -->
+		<a class="condition active" href="javascript:;" title="房型"><span>房型</span></a>
+		<!-- 下拉條件選單 -->
+		<ul class="condition-expand">
+			<li class="delete"><a class="hint" href="javascript:;" title="清除">清除</a></li>
+			<li class="select"><a href="javascript:;" title="整層住家">整層住家</a></li>
+			<li class="select"><a href="javascript:;" title="套房">套房</a></li>
+		</ul>
+		<!-- 當選完條件 span內要串條件名稱 -->
+		<a class="condition" href="javascript:;" title="格局"><span>格局</span></a>
+		<!-- 下拉條件選單 -->
+		<ul class="condition-expand">
+			<li class="delete"><a class="hint" href="javascript:;" title="清除">清除</a></li>
+			<li class="select"><a href="javascript:;" title="一房">一房</a></li>
+			<li class="select"><a href="javascript:;" title="二房">二房</a></li>
+			<li class="select"><a href="javascript:;" title="三房">三房</a></li>
+			<li class="select"><a href="javascript:;" title="四房">四房</a></li>
+			<li class="select"><a href="javascript:;" title="五房">五房</a></li>
+		</ul>
+		<!-- 當選完條件 span內要串條件名稱 -->
+		<a class="condition" href="javascript:;" title="預算"><span>預算</span></a>
+		<!-- 下拉條件選單 -->
+		<ul class="condition-expand">
+			<li class="delete"><a class="hint" href="javascript:;" title="清除">清除</a></li>
+			<li class="select"><form><input type="text" name="minimum" placeholder="最小金額"> - <input type="text" name="maximum" placeholder="最大金額"><button>確定</button></form></li>
+		</ul>
+		<a class="sort" href="javascript:;" title="排序">排序</a>
+		<!-- 下拉條件選單 -->
+		<ul class="condition-expand sort-expand">
+			<li class="select"><a href="javascript" title="金額低到高">金額低到高</a></li>
+			<li class="select"><a href="javascript" title="金額高到低">金額高到低</a></li>
+		</ul>
+	</section>
+
+	<!-- 物件 -->
+	<section class="content">
+		<!-- 租屋版 -->
+		<article>
+			<div class="pic"><img src="images/default.jpg" alt=""></div>
+			<!-- onclick內要串591連結 -->
+			<ul class="detail" onclick="window.open('https://m.591.com.tw/v2/rent/10956301','mywindow');">
+				<!-- li內要串地址 -->
+				<li class="heading add">崇德大樓旅樂序 中正區-館前路8號</li>
+				<li class="hint conditions">
+					<!-- span內要串其他條件 -->
+					<span class="sub-condition">獨立套房</span>
+					<span class="sub-condition">5坪</span>
+					<span class="sub-condition">10/11F</span>
+					<span class="sub-condition">電梯大樓</span>
+				</li>
+				<li class="price"><span class="heading">$24,000</span><i class="hint"> /月租</i></li>
+			</ul>
+			<button class="save"><img src="images/icons/favorite.svg" alt="加入收藏" width="24"></button>
+		</article>
+		<article>
+			<div class="pic"><img src="images/default.jpg" alt=""></div>
+			<!-- onclick內要串591連結 -->
+			<ul class="detail" onclick="window.open('https://m.591.com.tw/v2/rent/10956301','mywindow');">
+				<!-- li內要串地址 -->
+				<li class="heading add">崇德大樓旅樂序 中正區-館前路8號</li>
+				<li class="hint conditions">
+					<!-- span內要串其他條件 -->
+					<span class="sub-condition">獨立套房</span>
+					<span class="sub-condition">5坪</span>
+					<span class="sub-condition">10/11F</span>
+					<span class="sub-condition">電梯大樓</span>
+				</li>
+				<li class="price"><span class="heading">$24,000</span><i class="hint"> /月租</i></li>
+			</ul>
+			<button class="save"><img src="images/icons/favorite.svg" alt="加入收藏" width="24"></button>
+		</article>
+		<!-- 買房版 -->
+		<article>
+			<div class="pic"><img src="images/default_2.jpg" alt=""></div>
+			<!-- onclick內要串591連結 -->
+			<ul class="detail" onclick="window.open('https://m.591.com.tw/v2/rent/10956301','mywindow');">
+				<!-- li內要串地址 -->
+				<li class="heading add">中正區-臨沂街32巷</li>
+				<li class="hint conditions">
+					<!-- span內要串其他條件 -->
+					<span class="sub-condition">3房2廳2衛</span>
+					<span class="sub-condition">34.46坪</span>
+					<span class="sub-condition">屋齡36年</span>
+				</li>
+				<li class="price"><span class="heading">$54,000</span><i class="hint"> /月付</i></li>
+			</ul>
+			<button class="save"><img src="images/icons/favorite.svg" alt="加入收藏" width="24"></button>
+		</article>
+		<article>
+			<div class="pic"><img src="images/default_2.jpg" alt=""></div>
+			<!-- onclick內要串591連結 -->
+			<ul class="detail" onclick="window.open('https://m.591.com.tw/v2/rent/10956301','mywindow');">
+				<!-- li內要串地址 -->
+				<li class="heading add">中正區-臨沂街32巷</li>
+				<li class="hint conditions">
+					<!-- span內要串其他條件 -->
+					<span class="sub-condition">3房2廳2衛</span>
+					<span class="sub-condition">34.46坪</span>
+					<span class="sub-condition">屋齡36年</span>
+				</li>
+				<li class="price"><span class="heading">$54,000</span><i class="hint"> /月付</i></li>
+			</ul>
+			<button class="save"><img src="images/icons/favorite.svg" alt="加入收藏" width="24"></button>
+		</article>
+	</section>
+
+	<!-- 上下頁 -->
+	<section class="pageination hint">
+		<a class="btn-arrow" href="javascript:;" title="上一頁"><img src="images/icons/back.svg" alt="上一頁" width="24"></a>
+		<a class="hint" href="javascript:;" title="">1</a>
+		<a class="hint active" href="javascript:;" title="">2</a>
+		<a class="hint" href="javascript:;" title="">3</a>
+		...
+		<a class="hint" href="javascript:;" title="">22</a>
+		<a class="btn-arrow" href="javascript:;" title="下一頁"><img src="images/icons/forward.svg" alt="下一頁" width="24"></a>
+	</section>
+</body>
+</html>
